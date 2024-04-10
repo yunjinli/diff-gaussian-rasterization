@@ -1,5 +1,10 @@
 # Differential Gaussian Rasterization
 
+The code is based on
+
+- Gaussian-Grouping https://github.com/lkeab/gaussian-grouping
+- Deformable-3D-Gaussians https://github.com/ingra14m/Deformable-3D-Gaussians
+
 Used as the rasterization engine for the paper "3D Gaussian Splatting for Real-Time Rendering of Radiance Fields". If you can make use of it in your own research, please be so kind to cite us.
 
 <section class="section" id="BibTeX">

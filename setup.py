@@ -1,12 +1,15 @@
 #
-# Copyright (C) 2023, Inria
-# GRAPHDECO research group, https://team.inria.fr/graphdeco
+# Copyright (C) 2024, 4dgsam
 # All rights reserved.
-#
-# This software is free for non-commercial, research and evaluation use 
-# under the terms of the LICENSE.md file.
-#
-# For inquiries contact  george.drettakis@inria.fr
+# ------------------------------------------------------------------------
+# Modified from codes Gaussian-Grouping
+# Gaussian-Grouping research group, https://github.com/lkeab/gaussian-grouping
+# ------------------------------------------------------------------------
+# Modified from codes Deformable-3D-Gaussians
+# Deformable-3D-Gaussians research group, https://github.com/ingra14m/Deformable-3D-Gaussians
+# ------------------------------------------------------------------------
+# Modified from codes in Gaussian-Splatting
+# GRAPHDECO research group, https://team.inria.fr/graphdeco
 #
 
 from setuptools import setup
@@ -26,7 +29,7 @@ setup(
             "cuda_rasterizer/backward.cu",
             "rasterize_points.cu",
             "ext.cpp"],
-            extra_compile_args={"nvcc": ["-I" + os.path.join(os.path.dirname(os.path.abspath(__file__)), "third_party/glm/")]})
+            extra_compile_args={"nvcc": ["-Xcompiler", "-fno-gnu-unique","-I" + os.path.join(os.path.dirname(os.path.abspath(__file__)), "third_party/glm/")]})
         ],
     cmdclass={
         'build_ext': BuildExtension
